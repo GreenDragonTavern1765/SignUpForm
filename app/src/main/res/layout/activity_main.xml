@@ -6,58 +6,88 @@
     android:layout_height="match_parent"
     tools:context=".FormActivity">
 
+    <TextView
+        android:id="@+id/pageHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginBottom="620dp"
+        android:text="Create An Account"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <EditText
-        android:id="@+id/getFirstName"
-        android:layout_width="216dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="176dp"
-        android:layout_marginBottom="472dp"
-        android:autofillHints="First Name"
+        android:id="@+id/firstNameInput"
+        android:layout_width="302dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="552dp"
         android:ems="10"
+        android:hint="First Name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="130dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="481dp"
-        android:text="@string/provide_input"
-        android:textSize="20sp"
+    <EditText
+        android:id="@+id/lastNameInput"
+        android:layout_width="302dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/emailInput"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="302dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="420dp"
+        android:ems="10"
+        android:hint="Email Address"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="332dp"
-        android:text="Display Input"
-        android:textSize="20sp"
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="302dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="356dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName|textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="31dp"
-        android:layout_marginBottom="339dp"
-        android:text="TextView"
+    <EditText
+        android:id="@+id/confirmPasswordInput"
+        android:layout_width="302dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="292dp"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPersonName|textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/createAccountButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="209dp"
+        android:layout_marginStart="260dp"
         android:layout_marginBottom="233dp"
-        android:text="Button"
+        android:text="Create"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
