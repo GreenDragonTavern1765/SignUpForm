@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SignUpForm</string>
+    <string name="provide_input">Provide Input</string>
 </resources>
