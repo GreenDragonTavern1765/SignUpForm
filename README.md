@@ -2,6 +2,8 @@
 Description: a kotlin program that runs as a sign up sheet for a website, prompting the user to enter their name, their email address, a password, and a password confirmation,
 each of which will be checked to see if the inputs are valid, as well as if the passwords match. If they do, then a welcome message is printed to the screen. 
 
+![image](https://user-images.githubusercontent.com/89669624/153272728-75409d62-98f3-424b-92d6-7fda74c95a1c.png)
+
 ### Main Attributes
 PageHeader: prints Create Account to the screen, there for aesthetics only, doesn't do anything else
 
