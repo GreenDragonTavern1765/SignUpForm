@@ -16,9 +16,15 @@ class FormActivity : AppCompatActivity() {
         val confirm = findViewById<TextView>(R.id.confirmInput)
 
         findViewById<Button>(R.id.createButton).setOnClickListener {
-            checkBlankInput(name.text.toString(), email.text.toString(), password.text.toString(), confirm.text.toString())
-            if (passwordMatch(password.text.toString(), confirm.text.toString()) == 0)
-                findViewById<TextView>(R.id.confirmInput).setError("Password do not match")
+            if (checkBlankInput(name.text.toString(), email.text.toString(), password.text.toString(), confirm.text.toString()) == 0) {
+                findViewById<TextView>(R.id.errorMessage).text = "Invalid input fields"
+            } else {
+                if (passwordMatch(password.text.toString(), confirm.text.toString()) == 0)
+                    findViewById<TextView>(R.id.confirmInput).setError("Password do not match")
+                else
+                    findViewById<TextView>(R.id.errorMessage).text = ""
+                    findViewById<TextView>(R.id.welcomeMessage).text = "Welcome, " + name.text.toString()
+            }
         }
     }
 
@@ -28,14 +34,23 @@ class FormActivity : AppCompatActivity() {
         return 0
     }
 
-    fun checkBlankInput(name: String, email: String, password: String, confirm: String) {
-        if (name.isBlank())
+    fun checkBlankInput(name: String, email: String, password: String, confirm: String) : Int {
+        if (name.isBlank()) {
             findViewById<TextView>(R.id.nameInput).setError("Please enter a valid name")
-        if (email.isBlank())
+            return 0
+        }
+        if (email.isBlank()) {
             findViewById<TextView>(R.id.emailInput).setError("Please enter a valid email")
-        if (password.isBlank())
+            return 0
+        }
+        if (password.isBlank()) {
             findViewById<TextView>(R.id.passwordInput).setError("Please enter a password")
-        if (confirm.isBlank())
+            return 0
+        }
+        if (confirm.isBlank()) {
             findViewById<TextView>(R.id.confirmInput).setError("Please confirm the password")
+            return 0
+        }
+        return 1
     }
 }
